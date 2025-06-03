@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="pt-br" className="m-0 p-0">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased m-0 p-0`}>
         {children}
+        <div id="modal-root"></div> 
         <footer className=" text-black py-6 mt-10">
           <div className="container mx-auto text-center">
             <p className="text-sm">
