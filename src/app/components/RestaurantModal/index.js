@@ -137,7 +137,7 @@ const RestaurantModal = ({ state, city, onClose }) => {
         readableTypes.add(readableTypesMap[type]);
       }
     }
-    
+
     if (readableTypes.size === 0 && types.includes('establishment')) {
       readableTypes.add("Estabelecimento Geral");
     } else if (readableTypes.size === 0 && types.includes('point_of_interest')) {
@@ -271,7 +271,7 @@ const RestaurantModal = ({ state, city, onClose }) => {
       photos: photos,
       rating: placeResult.rating,
       userRatingsTotal: placeResult.user_ratings_total,
-      address: placeResult.formatted_address || placeResult.vicinity,
+      address: placeResult.address || placeResult.vicinity, 
       phone:
         placeResult.formatted_phone_number ||
         placeResult.international_phone_number ||
@@ -321,7 +321,8 @@ const RestaurantModal = ({ state, city, onClose }) => {
               <div ref={mapRef} className="w-full h-full" />
             )}
           </div>
-          <div className="w-full md:w-1/2 flex flex-col">
+
+          <div className="w-full md:w-1/2 flex flex-col h-full">
             <div className="p-4 sm:p-6 border-b border-amber-100 bg-amber-50 flex-shrink-0">
               <div className="flex justify-between items-center mb-2">
                 <div>
