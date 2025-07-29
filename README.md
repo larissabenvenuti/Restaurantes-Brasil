@@ -17,18 +17,6 @@ Ao clicar em um marcador no mapa ou em um item da lista, um modal detalhado é e
   * Avaliações de usuários
   * Tipos de culinária/estabelecimento
 
-## ✨ Funcionalidades
-
-  * **Busca por Localidade:** Encontre estabelecimentos em qualquer cidade e estado do Brasil.
-  * **Visualização em Mapa:** Todos os resultados são exibidos em um mapa do Google Maps, com marcadores clicáveis.
-  * **Filtros Dinâmicos:**
-      * **Tipos de Estabelecimento:** Filtre por "Restaurante", "Bar" ou "Café".
-      * **Avaliação Mínima:** Defina uma classificação mínima para os resultados.
-      * **Nível de Preço:** Filtre por faixas de preço ($, $$, $$$, $$$$).
-  * **Detalhes Abrangentes:** Acesse um modal com informações detalhadas sobre cada local.
-  * **Galeria de Fotos:** Visualize fotos dos estabelecimentos.
-  * **Design Responsivo:** Interface otimizada para desktop e dispositivos móveis.
-
 ## 🛠️ Tecnologias Utilizadas
 
   * **Frontend:**
@@ -41,6 +29,18 @@ Ao clicar em um marcador no mapa ou em um item da lista, um modal detalhado é e
   * **APIs Externas:**
       * **Google Maps JavaScript API:** Para o mapa interativo.
       * **Google Places API:** Para geocodificação, busca de locais e obtenção de detalhes dos estabelecimentos.
+        
+## ✨ Funcionalidades
+
+  * **Busca por Localidade:** Encontre estabelecimentos em qualquer cidade e estado do Brasil.
+  * **Visualização em Mapa:** Todos os resultados são exibidos em um mapa do Google Maps, com marcadores clicáveis.
+  * **Filtros Dinâmicos:**
+      * **Tipos de Estabelecimento:** Filtre por "Restaurante", "Bar" ou "Café".
+      * **Avaliação Mínima:** Defina uma classificação mínima para os resultados.
+      * **Nível de Preço:** Filtre por faixas de preço ($, $$, $$$, $$$$).
+  * **Detalhes Abrangentes:** Acesse um modal com informações detalhadas sobre cada local.
+  * **Galeria de Fotos:** Visualize fotos dos estabelecimentos.
+  * **Design Responsivo:** Interface otimizada para desktop e dispositivos móveis.
 
 ## 🌐 Acesse o Projeto Deployed
 
