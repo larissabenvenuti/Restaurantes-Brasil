@@ -1,53 +1,96 @@
+<div align="center">
+
 # 📍 Restaurantes do Brasil
 
-Este é um aplicativo web interativo desenvolvido para ajudar usuários a descobrir e explorar restaurantes, bares e cafés em qualquer cidade do Brasil, utilizando dados abrangentes da Google Places API.
+**Discover restaurants, bars and cafés in any Brazilian city on an interactive map, with filters and rich details powered by Google Places.**
 
-O projeto permite que os usuários busquem estabelecimentos por **cidade e estado**, visualizando os resultados diretamente em um mapa interativo. Ele oferece funcionalidades de **filtragem por tipo de estabelecimento** (Restaurante, Bar, Café), **avaliação mínima** e **nível de preço**, proporcionando uma experiência de busca personalizada.
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?logo=tailwindcss&logoColor=white)
+![Google Maps](https://img.shields.io/badge/Google_Maps_Platform-4285F4?logo=googlemaps&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?logo=vercel&logoColor=white)
 
-Ao clicar em um marcador no mapa ou em um item da lista, um modal detalhado é exibido, contendo informações essenciais como:
+[🌐 Live site](https://restaurantes-brasil.vercel.app/)
 
-  * Nome do estabelecimento
-  * Endereço completo
-  * Fotos (se disponíveis)
-  * Classificação e total de avaliações
-  * Nível de preço
-  * Status de funcionamento (aberto/fechado agora)
-  * Horários de funcionamento
-  * Número de telefone e website (se disponíveis)
-  * Avaliações de usuários
-  * Tipos de culinária/estabelecimento
+</div>
 
-## 🛠️ Tecnologias Utilizadas
+![Restaurantes do Brasil: map with search results](docs/screenshots/hero.png)
 
-  * **Frontend:**
-      * **Next.js:** Framework React para construção da interface de usuário, com renderização no lado do servidor (SSR) para melhor performance e SEO.
-      * **React:** Biblioteca JavaScript para a construção de componentes de UI.
-      * **Tailwind CSS:** Framework CSS utilitário para estilização rápida e responsiva.
-  * **Backend (API Route):**
-      * **Next.js API Routes:** Funciona como um *backend* sem servidor para interagir com a Google Places API.
-      * **Node.js:** Ambiente de execução do JavaScript.
-  * **APIs Externas:**
-      * **Google Maps JavaScript API:** Para o mapa interativo.
-      * **Google Places API:** Para geocodificação, busca de locais e obtenção de detalhes dos estabelecimentos.
-        
-## ✨ Funcionalidades
+## ⚡ At a glance
 
-  * **Busca por Localidade:** Encontre estabelecimentos em qualquer cidade e estado do Brasil.
-  * **Visualização em Mapa:** Todos os resultados são exibidos em um mapa do Google Maps, com marcadores clicáveis.
-  * **Filtros Dinâmicos:**
-      * **Tipos de Estabelecimento:** Filtre por "Restaurante", "Bar" ou "Café".
-      * **Avaliação Mínima:** Defina uma classificação mínima para os resultados.
-      * **Nível de Preço:** Filtre por faixas de preço ($, $$, $$$, $$$$).
-  * **Detalhes Abrangentes:** Acesse um modal com informações detalhadas sobre cada local.
-  * **Galeria de Fotos:** Visualize fotos dos estabelecimentos.
-  * **Design Responsivo:** Interface otimizada para desktop e dispositivos móveis.
+- **Problem:** finding a good place to eat usually means juggling a map, reviews and filters in different tabs.
+- **Solution:** one screen where you search a city, see every result on the map and refine by type, rating and price.
+- **My role:** design, front-end development and the serverless API layer.
 
-## 🌐 Acesse o Projeto Deployed
+## ✨ Features
 
-Você pode explorar o aplicativo em funcionamento através do seguinte link:
+| Feature | What it does |
+|---|---|
+| 🔎 **Location search** | Find places in any Brazilian city and state |
+| 🗺️ **Interactive map** | Every result is a clickable marker on a Google Map, linked to the results list |
+| 🎛️ **Filters** | Type (restaurant, bar, café), minimum rating and price level ($ to $$$$) |
+| 🪟 **Detail modal** | Address, photos, rating and review count, price level, open-now status, opening hours, phone, website, user reviews and cuisine types |
+| 🖼️ **Photo gallery** | Browse photos of each place, when available |
+| 📱 **Responsive design** | Layout adapted for desktop and mobile |
 
-[Clique aqui para acessar o site](https://restaurantes-brasil.vercel.app/)
+## 📸 Screens
 
-## 🔒 Licença
+| Map and results | Filters |
+|---|---|
+| ![](docs/screenshots/map.png) | ![](docs/screenshots/filters.png) |
 
-Este projeto está sob a proteção de **Direitos Autorais Reservados**. Todos os direitos sobre o código-fonte, design, conteúdo e quaisquer outros elementos presentes neste repositório são de propriedade exclusiva de Larissa Benvenuti. A reprodução, distribuição, modificação, exibição pública ou uso comercial, total ou parcial, sem autorização expressa por escrito do(s) detentor(es) dos direitos, é estritamente proibida.
+| Place details | Photo gallery |
+|---|---|
+| ![](docs/screenshots/details.png) | ![](docs/screenshots/gallery.png) |
+
+| Mobile |
+|---|
+| ![](docs/screenshots/mobile.png) |
+
+## 🏗️ Technical highlights
+
+- **Next.js API Routes** act as a serverless backend between the app and the Google Places API, keeping the search and details logic out of the client. The server key has no `NEXT_PUBLIC_` prefix, so it is never exposed to the browser.
+- **Google Maps JavaScript API** for the interactive map and markers, and **Google Places API** for geocoding, place search and place details.
+- **Client-side filtering** by type, rating and price, so results update instantly without a new search.
+- **Tailwind CSS** for a fast, responsive interface.
+
+## 🛠️ Run locally
+
+```bash
+git clone https://github.com/larissabenvenuti/Restaurantes-Brasil.git
+cd Restaurantes-Brasil
+npm install
+npm run dev
+```
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=your-api-key
+MAPS_SERVER_API_KEY=your-api-key
+```
+
+- `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`: browser key, used by the interactive map.
+- `MAPS_SERVER_API_KEY`: server key, used only by the API Routes to call the Places API.
+
+<details>
+<summary><b>How to get a Google API key</b></summary>
+
+1. Open the [Google Cloud Console](https://console.cloud.google.com/) and create or select a project.
+2. Enable billing for the project (Google requires it, but includes a free monthly usage credit).
+3. Under **APIs & Services → Library**, enable **Maps JavaScript API** and **Places API**.
+4. Go to **APIs & Services → Credentials → Create credentials → API key** and create **two keys**: one for the browser and one for the server.
+5. Restrict each key to avoid misuse: the browser key by HTTP referrer (your domain and `localhost`) and by API (Maps JavaScript API); the server key by API (Places API).
+6. Paste them into `.env.local`.
+
+</details>
+
+Open http://localhost:3000.
+
+## 🔒 Copyright & license
+
+**All rights reserved.**
+
+The source code, design and all other elements in this repository belong exclusively to **Larissa Benvenuti**. Place data, photos and reviews are provided by Google and belong to their respective owners.
+
+Reproduction, distribution, modification, public display or commercial use, in whole or in part, without the written permission of the rights holder is strictly prohibited.
